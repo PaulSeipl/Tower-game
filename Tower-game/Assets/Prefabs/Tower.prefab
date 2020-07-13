@@ -122,3 +122,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   towerLives: 100
+  explosion1: {fileID: 4027676931186361845, guid: 09b949c4255f741309c939ead2907ea3,
+    type: 3}
+  explosion2: {fileID: 1612078298753181681, guid: 9974e1c0fa3564868b612bb86febedd9,
+    type: 3}
