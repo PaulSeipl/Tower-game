@@ -8,7 +8,7 @@ public class BloodSplashController : MonoBehaviour
     void Start()
     {
         //Invoke("DestroyObject", 3);
-        Debug.Log("Ich wurde erstellt");
+        Debug.Log("Ich wurde erstellt"); 
     }
 
     private void DestroyObject() {
