@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1007452564425436604
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1007452564425436605}
+  - component: {fileID: 1007452564425436606}
+  m_Layer: 0
+  m_Name: EnemySpawnerLeft Main Menu
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1007452564425436605
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1007452564425436604}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -14.94, y: -3.51, z: -61.09797}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1007452564425436606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1007452564425436604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2dc288cf7ff54b93b1bd195f7a2a134, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  normalEnemy: {fileID: 3133858296147348594, guid: 2ac0783c452ba400094ad0c228e62782,
+    type: 3}
+  tankEnemy: {fileID: 4451122690903969034, guid: da1249018ac0945bb9f3fcc4eae8e929,
+    type: 3}
+  fastEnemy: {fileID: 8715305067205492144, guid: 846af357fe0a04a05acb9e94b7b08b92,
+    type: 3}
+  spawnRate: 4
