@@ -30,7 +30,9 @@ public class BulletController : MonoBehaviour
         if (other.gameObject.tag.Equals("FastEnemy")) {
             FastZombieController enemy = other.gameObject.GetComponent<FastZombieController>();
             enemy.lives = enemy.lives - damage;
-            Debug.Log("Hit an Enemy");
+        } else if (other.gameObject.tag.Equals("TankEnemy")) {
+            TankZombieController enemy = other.gameObject.GetComponent<TankZombieController>();
+            enemy.lives = enemy.lives - damage;
         }
 
         Destroy(gameObject);

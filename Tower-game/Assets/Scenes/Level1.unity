@@ -166,7 +166,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalEnemy: {fileID: 4108240570482164165, guid: 7912652f8d980416b8b01ead9839ead4,
     type: 3}
-  tankEnemy: {fileID: 4108240570482164165, guid: 7912652f8d980416b8b01ead9839ead4,
+  tankEnemy: {fileID: 5930129912487683517, guid: 968c112f504ca4230829c076b8fa81e1,
     type: 3}
   fastEnemy: {fileID: 4108240570482164165, guid: 7912652f8d980416b8b01ead9839ead4,
     type: 3}
@@ -285,7 +285,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalEnemy: {fileID: 4108240570482164165, guid: 7912652f8d980416b8b01ead9839ead4,
     type: 3}
-  tankEnemy: {fileID: 4108240570482164165, guid: 7912652f8d980416b8b01ead9839ead4,
+  tankEnemy: {fileID: 5930129912487683517, guid: 968c112f504ca4230829c076b8fa81e1,
     type: 3}
   fastEnemy: {fileID: 4108240570482164165, guid: 7912652f8d980416b8b01ead9839ead4,
     type: 3}
@@ -609,7 +609,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1845663192
 GameObject:
@@ -756,7 +756,7 @@ PrefabInstance:
     - target: {fileID: 6750938433845413722, guid: 9232feb24eccf411ea6d9ead0a4bb241,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6750938433845413722, guid: 9232feb24eccf411ea6d9ead0a4bb241,
         type: 3}
@@ -820,7 +820,7 @@ PrefabInstance:
     - target: {fileID: 7730251548413535233, guid: a4e3567eba5204f9691ba03ec07024cc,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7730251548413535233, guid: a4e3567eba5204f9691ba03ec07024cc,
         type: 3}

@@ -8,6 +8,15 @@ TextureImporter:
   - first:
       213: -4194252128753940387
     second: Tank Zombie_1
+  - first:
+      213: -8282159331815051749
+    second: Tank Zombie_2
+  - first:
+      213: 2309527402320526886
+    second: Tank Zombie_3
+  - first:
+      213: 2530873621525331115
+    second: Tank Zombie_4
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -91,7 +100,112 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Tank Zombie_0
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 296
+        width: 126
+        height: 103
+      alignment: 9
+      pivot: {x: 0.38804555, y: 0.089137696}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f93a88571767fd20800000000000000
+      internalID: 3312229400921651699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tank Zombie_1
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 263
+        width: 67
+        height: 42
+      alignment: 9
+      pivot: {x: 0.8158124, y: 0.24046907}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d58023739e50bc5c0800000000000000
+      internalID: -4194252128753940387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tank Zombie_2
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 150
+        width: 152
+        height: 112
+      alignment: 9
+      pivot: {x: 0.411414, y: 0.087803565}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1e2afde7fbdf0d80800000000000000
+      internalID: -8282159331815051749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tank Zombie_3
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 90
+        width: 57
+        height: 61
+      alignment: 9
+      pivot: {x: 0.5449963, y: 0.8363645}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62e785e9fe61d0020800000000000000
+      internalID: 2309527402320526886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tank Zombie_4
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 75
+        width: 62
+        height: 65
+      alignment: 9
+      pivot: {x: 0.39658183, y: 0.8156651}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bac7c6e46287f1320800000000000000
+      internalID: 2530873621525331115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

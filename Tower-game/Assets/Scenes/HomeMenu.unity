@@ -3019,12 +3019,12 @@ PrefabInstance:
     - target: {fileID: 1007452564425436605, guid: 27eebf5e8d2d94215aff1206a757158e,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9.77
+      value: -12.32
       objectReference: {fileID: 0}
     - target: {fileID: 1007452564425436605, guid: 27eebf5e8d2d94215aff1206a757158e,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.18
+      value: -3.65
       objectReference: {fileID: 0}
     - target: {fileID: 1007452564425436605, guid: 27eebf5e8d2d94215aff1206a757158e,
         type: 3}
@@ -3071,6 +3071,24 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1007452564425436606, guid: 27eebf5e8d2d94215aff1206a757158e,
+        type: 3}
+      propertyPath: normalEnemy
+      value: 
+      objectReference: {fileID: 4108240570482164165, guid: 7912652f8d980416b8b01ead9839ead4,
+        type: 3}
+    - target: {fileID: 1007452564425436606, guid: 27eebf5e8d2d94215aff1206a757158e,
+        type: 3}
+      propertyPath: tankEnemy
+      value: 
+      objectReference: {fileID: 5930129912487683517, guid: 968c112f504ca4230829c076b8fa81e1,
+        type: 3}
+    - target: {fileID: 1007452564425436606, guid: 27eebf5e8d2d94215aff1206a757158e,
+        type: 3}
+      propertyPath: fastEnemy
+      value: 
+      objectReference: {fileID: 4108240570482164165, guid: 7912652f8d980416b8b01ead9839ead4,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 27eebf5e8d2d94215aff1206a757158e, type: 3}
 --- !u!1001 &1139200550439460409
@@ -3344,15 +3362,33 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5318983612205712049, guid: c52d10803c59e42d79696eaba3006ebe,
+        type: 3}
+      propertyPath: tankEnemy
+      value: 
+      objectReference: {fileID: 5930129912487683517, guid: 968c112f504ca4230829c076b8fa81e1,
+        type: 3}
+    - target: {fileID: 5318983612205712049, guid: c52d10803c59e42d79696eaba3006ebe,
+        type: 3}
+      propertyPath: fastEnemy
+      value: 
+      objectReference: {fileID: 4108240570482164165, guid: 7912652f8d980416b8b01ead9839ead4,
+        type: 3}
+    - target: {fileID: 5318983612205712049, guid: c52d10803c59e42d79696eaba3006ebe,
+        type: 3}
+      propertyPath: normalEnemy
+      value: 
+      objectReference: {fileID: 4108240570482164165, guid: 7912652f8d980416b8b01ead9839ead4,
+        type: 3}
     - target: {fileID: 8273038699316702413, guid: c52d10803c59e42d79696eaba3006ebe,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 9.17
+      value: 11.63
       objectReference: {fileID: 0}
     - target: {fileID: 8273038699316702413, guid: c52d10803c59e42d79696eaba3006ebe,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.1
+      value: -3.59
       objectReference: {fileID: 0}
     - target: {fileID: 8273038699316702413, guid: c52d10803c59e42d79696eaba3006ebe,
         type: 3}

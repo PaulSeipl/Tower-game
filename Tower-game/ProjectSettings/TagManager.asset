@@ -48,3 +48,6 @@ TagManager:
   - name: FastEnemySorting
     uniqueID: 252777115
     locked: 0
+  - name: TankEnemySorting
+    uniqueID: 3609113935
+    locked: 0

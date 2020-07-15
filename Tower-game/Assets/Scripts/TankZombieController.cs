@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FastZombieController : MonoBehaviour
+public class TankZombieController : MonoBehaviour
 {
 
     public float movingSpeed;
