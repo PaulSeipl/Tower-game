@@ -7,6 +7,7 @@ TagManager:
   - FastEnemy
   - NormalEnemy
   - TankEnemy
+  - Tower
   layers:
   - Default
   - TransparentFX
@@ -43,4 +44,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: FastEnemySorting
+    uniqueID: 252777115
     locked: 0

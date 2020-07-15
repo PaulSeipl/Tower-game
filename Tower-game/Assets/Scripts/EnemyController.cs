@@ -11,17 +11,21 @@ public class EnemyController : MonoBehaviour
 
     public GameObject onDestroyAnimation;
     private bool isMovingRight;
-    private Rigidbody2D rb;
+    private float xScale;
 
 
     // Start is called before the first frame update
     void Start()
     {
 
-        rb = GetComponent<Rigidbody2D>();
+        xScale = transform.localScale.x;
 
         if (Tower.transform.position.x < transform.position.x) {
             isMovingRight = false;
+
+            Vector3 theScale = transform.localScale;
+            theScale.x = -xScale;
+            transform.localScale = theScale;
         } else {
             isMovingRight = true;
         }
