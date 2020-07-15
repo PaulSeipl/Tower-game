@@ -27,8 +27,8 @@ public class BulletController : MonoBehaviour
     /// <param name="other">The Collision2D data associated with this collision.</param>
     void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.tag.EndsWith("Enemy")) {
-            EnemyController enemy = other.gameObject.GetComponent<EnemyController>();
+        if (other.gameObject.tag.Equals("FastEnemy")) {
+            FastZombieController enemy = other.gameObject.GetComponent<FastZombieController>();
             enemy.lives = enemy.lives - damage;
             Debug.Log("Hit an Enemy");
         }

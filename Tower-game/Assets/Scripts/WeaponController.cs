@@ -16,7 +16,7 @@ public class WeaponController : MonoBehaviour
 
     void Start()
     {
-        scaleY = transform.localScale.x;
+        scaleY = transform.localScale.y;
     }
 
     // Update is called once per frame

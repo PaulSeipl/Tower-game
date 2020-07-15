@@ -7,8 +7,7 @@ public class BloodSplashController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //Invoke("DestroyObject", 3);
-        Debug.Log("Ich wurde erstellt"); 
+        Invoke("DestroyObject", 2);
     }
 
     private void DestroyObject() {
