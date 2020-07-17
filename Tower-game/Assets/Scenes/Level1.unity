@@ -164,7 +164,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2dc288cf7ff54b93b1bd195f7a2a134, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  normalEnemy: {fileID: 4108240570482164165, guid: 7912652f8d980416b8b01ead9839ead4,
+  normalEnemy: {fileID: 6701689865778632618, guid: 57adb65b691ee4d8997eea8902dd70b2,
     type: 3}
   tankEnemy: {fileID: 5930129912487683517, guid: 968c112f504ca4230829c076b8fa81e1,
     type: 3}
@@ -283,7 +283,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2dc288cf7ff54b93b1bd195f7a2a134, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  normalEnemy: {fileID: 4108240570482164165, guid: 7912652f8d980416b8b01ead9839ead4,
+  normalEnemy: {fileID: 6701689865778632618, guid: 57adb65b691ee4d8997eea8902dd70b2,
     type: 3}
   tankEnemy: {fileID: 5930129912487683517, guid: 968c112f504ca4230829c076b8fa81e1,
     type: 3}
