@@ -51,3 +51,6 @@ TagManager:
   - name: TankEnemySorting
     uniqueID: 3609113935
     locked: 0
+  - name: NormalEnemySorting
+    uniqueID: 2274376085
+    locked: 0
