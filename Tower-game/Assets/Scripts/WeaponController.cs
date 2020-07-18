@@ -48,6 +48,7 @@ public class WeaponController : MonoBehaviour
     }
 
     private void shoot() {
+        FindObjectOfType<AudioManager>().Play("Shoot Pistol");
         GameObject firedBullet = Instantiate(bullet, shootingPoint.position, transform.rotation);
                 firedBullet.GetComponent<Rigidbody2D>().velocity = shootingPoint.right * shootingSpeed;
                 timeBtwShots = startTimeBtwShots;

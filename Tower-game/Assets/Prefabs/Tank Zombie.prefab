@@ -534,6 +534,7 @@ GameObject:
   - component: {fileID: 5930129912487683514}
   - component: {fileID: 5930129912487683512}
   - component: {fileID: 7714081933017182569}
+  - component: {fileID: 7338864341683807193}
   m_Layer: 8
   m_Name: Tank Zombie
   m_TagString: TankEnemy
@@ -616,3 +617,34 @@ MonoBehaviour:
   damage: 10
   onDestroyAnimation: {fileID: 7704014058367041833, guid: e221d3fef455e448a8d18d8c78812b30,
     type: 3}
+--- !u!114 &7338864341683807193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5930129912487683517}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58a5cc6ca4fdaff4e8a80a263d593157, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sound:
+    name: 
+    attackClips:
+    - {fileID: 8300000, guid: 856b909c120d923428e3176c5ff59942, type: 3}
+    - {fileID: 8300000, guid: 48b8dcf756bebc54b968ab0e9da64eec, type: 3}
+    - {fileID: 8300000, guid: 404bd0e3eadb5ce49ba31a12abc2ada5, type: 3}
+    walkingClips:
+    - {fileID: 8300000, guid: 187352c7b492bf3499e6b34e5cfdf2b2, type: 3}
+    - {fileID: 8300000, guid: d68a03752a4127a4a95d90f1eddea10a, type: 3}
+    - {fileID: 8300000, guid: 5f3a3e43dc0d32947a1b3203949044bc, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    startingTime: 15
+    repeatingTime: 30
+    isAttacking: 0
+    source: {fileID: 0}
+    audioMixerGroup: {fileID: -9092980436661768787, guid: cb31c72f77f7dbb44b4c6ff4bdf951a6,
+      type: 2}

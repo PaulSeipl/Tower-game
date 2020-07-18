@@ -18,6 +18,7 @@ public class FastZombieController : MonoBehaviour
     private bool touchedTower = false;
     private float xScale;
     private Animator anim;
+    private SfxManager sfx;
 
     // Start is called before the first frame update
     void Start()
@@ -34,7 +35,7 @@ public class FastZombieController : MonoBehaviour
         } else {
             isMovingRight = true;
         }
-
+        InvokeRepeating("Play", 2f, 10f);//TODO
         anim = GetComponent<Animator>();
     }
 
@@ -74,6 +75,9 @@ public class FastZombieController : MonoBehaviour
                 isRunning = false;
                 towerLives = other.gameObject.GetComponent<TowerLivesController>();
             } else {
+                sfx = gameObject.GetComponent<SfxManager>();
+                sfx.sound.isAttacking = true;
+                sfx.playRandomClip();
                 touchedTower = true;
                 anim.SetBool("isRunning", false);
             }
