@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6701689865778632620}
   - component: {fileID: 6701689865778632621}
   - component: {fileID: 6701689865778632622}
+  - component: {fileID: 844433694960187846}
   m_Layer: 8
   m_Name: Normal Zombie
   m_TagString: NormalEnemy
@@ -94,6 +95,37 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &844433694960187846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6701689865778632618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58a5cc6ca4fdaff4e8a80a263d593157, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sound:
+    name: 
+    attackClips:
+    - {fileID: 8300000, guid: db19d88960d3f584dbeddbad4f7a0e9f, type: 3}
+    - {fileID: 8300000, guid: 699f245e8f80cb24db1ad6a16a3a6a92, type: 3}
+    - {fileID: 8300000, guid: 842c5f1cd11811e4c94f778ec380f86c, type: 3}
+    walkingClips:
+    - {fileID: 8300000, guid: 27d0d93abf222bc4e992764dbffb6d8f, type: 3}
+    - {fileID: 8300000, guid: dcf4a1c7df1e78642953b0cd3c017fc4, type: 3}
+    - {fileID: 8300000, guid: 1e0b3f7e523b8ab42b5c5685d0aae931, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    startingTime: 10
+    repeatingTime: 20
+    isAttacking: 0
+    source: {fileID: 0}
+    audioMixerGroup: {fileID: -9092980436661768787, guid: cb31c72f77f7dbb44b4c6ff4bdf951a6,
+      type: 2}
 --- !u!1 &6701689866301399783
 GameObject:
   m_ObjectHideFlags: 0
