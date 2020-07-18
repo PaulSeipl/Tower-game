@@ -206,6 +206,7 @@ GameObject:
   - component: {fileID: 1831636736671351593}
   - component: {fileID: 637555792926936875}
   - component: {fileID: 7093249646926351572}
+  - component: {fileID: -4701308221660048881}
   m_Layer: 8
   m_Name: Fast Zombie
   m_TagString: FastEnemy
@@ -288,6 +289,38 @@ MonoBehaviour:
   damage: 1
   onDestroyAnimation: {fileID: 7704014058367041833, guid: e221d3fef455e448a8d18d8c78812b30,
     type: 3}
+--- !u!114 &-4701308221660048881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4108240570482164165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58a5cc6ca4fdaff4e8a80a263d593157, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sound:
+    name: 
+    attackClips:
+    - {fileID: 8300000, guid: 1c8d628c5e8244f4dbcd9c840c447613, type: 3}
+    - {fileID: 8300000, guid: c3224f3799d914349844cbe1c73e9c4c, type: 3}
+    - {fileID: 8300000, guid: fbfd28cae95898848b1825cc193f9e66, type: 3}
+    walkingClips:
+    - {fileID: 8300000, guid: 52a9829d5a2c9a14ca8ca2b995594dba, type: 3}
+    - {fileID: 8300000, guid: 67baf7f3bf154ae46bde63e5b836891b, type: 3}
+    - {fileID: 8300000, guid: de117b283ab38944f87900c5a56508a7, type: 3}
+    - {fileID: 8300000, guid: aea8948b2dbb6294ea20b7dacf883d82, type: 3}
+    volume: 0.508
+    pitch: 1
+    loop: 0
+    startingTime: 2
+    repeatingTime: 5
+    isAttacking: 0
+    source: {fileID: 0}
+    audioMixerGroup: {fileID: -9092980436661768787, guid: cb31c72f77f7dbb44b4c6ff4bdf951a6,
+      type: 2}
 --- !u!1 &4824923283888882934
 GameObject:
   m_ObjectHideFlags: 0
