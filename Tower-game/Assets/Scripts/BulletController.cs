@@ -33,6 +33,9 @@ public class BulletController : MonoBehaviour
         } else if (other.gameObject.tag.Equals("TankEnemy")) {
             TankZombieController enemy = other.gameObject.GetComponent<TankZombieController>();
             enemy.lives = enemy.lives - damage;
+        } else if (other.gameObject.tag.Equals("NormalEnemy")) {
+            NormalZombieController enemy = other.gameObject.GetComponent<NormalZombieController>();
+            enemy.lives = enemy.lives - damage;
         }
 
         Destroy(gameObject);
