@@ -4,14 +4,19 @@ using UnityEngine;
 
 public class EnemySpawnerScript : MonoBehaviour
 {
-
     public GameObject normalEnemy;
     public GameObject tankEnemy;
     public GameObject fastEnemy;
+    public float minWaiting = 5;
+    public float maxWaiting = 10;
+    public float probabilityNormal = 1;
+    public float probabilityFast = 1;
+    public float probabilityTank = 1;
 
+    private float probabilitySum;
     private List<GameObject> enemyList = new List<GameObject>();
-    Vector2 whereToSpawn;
-    public float spawnRate = 2;
+    private Vector2 whereToSpawn;
+    private float spawnRate;
     float nextSpawn = 0.0f;
 
     // Start is called before the first frame update
@@ -20,6 +25,8 @@ public class EnemySpawnerScript : MonoBehaviour
         enemyList.Add(normalEnemy);
         enemyList.Add(fastEnemy);
         enemyList.Add(tankEnemy);
+        spawnRate = Random.Range(minWaiting, maxWaiting);
+        probabilitySum = probabilityTank + probabilityFast + probabilityNormal;
     }
 
     // Update is called once per frame
@@ -30,11 +37,21 @@ public class EnemySpawnerScript : MonoBehaviour
             nextSpawn = Time.time + spawnRate;
             whereToSpawn = new Vector2(transform.position.x, transform.position.y);
 
-            int enemyIndex = (int) Random.Range(0, 3.1f);
+            float probability = (int) Random.Range(0, probabilitySum);
+
+            int enemyIndex;
+            if (probability <= probabilityNormal) {
+                enemyIndex = 0;
+            } else if (probability <= probabilityNormal + probabilityFast) {
+                enemyIndex = 1;
+            } else {
+                enemyIndex = 2;
+            }
 
             GameObject enemy = enemyList[enemyIndex];
 
             Instantiate(enemy, whereToSpawn, Quaternion.identity);
+            spawnRate = Random.Range(minWaiting, maxWaiting);
         }
 
     }

@@ -156,7 +156,11 @@ MonoBehaviour:
     type: 3}
   fastEnemy: {fileID: 3364348103172644155, guid: 4f54cde5e05444729aac283d97da572d,
     type: 3}
-  spawnRate: 3
+  minWaiting: 5
+  maxWaiting: 10
+  probabilityNormal: 5
+  probabilityFast: 2
+  probabilityTank: 3
 --- !u!4 &181460811
 Transform:
   m_ObjectHideFlags: 0
@@ -294,7 +298,11 @@ MonoBehaviour:
     type: 3}
   fastEnemy: {fileID: 7021669443414559630, guid: ef9850a90e558429ba0ac17dbbf09254,
     type: 3}
-  spawnRate: 3
+  minWaiting: 5
+  maxWaiting: 10
+  probabilityNormal: 5
+  probabilityFast: 2
+  probabilityTank: 3
 --- !u!1001 &982275982
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -523,7 +531,11 @@ MonoBehaviour:
     type: 3}
   fastEnemy: {fileID: 8672317772935046913, guid: 81ea9da7e1a0d4cf481d6df3cd23a73c,
     type: 3}
-  spawnRate: 3
+  minWaiting: 5
+  maxWaiting: 10
+  probabilityNormal: 5
+  probabilityFast: 2
+  probabilityTank: 3
 --- !u!4 &1040419886
 Transform:
   m_ObjectHideFlags: 0
@@ -573,7 +585,11 @@ MonoBehaviour:
     type: 3}
   fastEnemy: {fileID: 7021669443414559630, guid: ef9850a90e558429ba0ac17dbbf09254,
     type: 3}
-  spawnRate: 3
+  minWaiting: 5
+  maxWaiting: 10
+  probabilityNormal: 5
+  probabilityFast: 2
+  probabilityTank: 3
 --- !u!4 &1347598924
 Transform:
   m_ObjectHideFlags: 0
@@ -1104,7 +1120,11 @@ MonoBehaviour:
     type: 3}
   fastEnemy: {fileID: 3364348103172644155, guid: 4f54cde5e05444729aac283d97da572d,
     type: 3}
-  spawnRate: 3
+  minWaiting: 5
+  maxWaiting: 10
+  probabilityNormal: 5
+  probabilityFast: 2
+  probabilityTank: 3
 --- !u!4 &1965633316
 Transform:
   m_ObjectHideFlags: 0
@@ -1154,7 +1174,11 @@ MonoBehaviour:
     type: 3}
   fastEnemy: {fileID: 8672317772935046913, guid: 81ea9da7e1a0d4cf481d6df3cd23a73c,
     type: 3}
-  spawnRate: 3
+  minWaiting: 5
+  maxWaiting: 10
+  probabilityNormal: 5
+  probabilityFast: 2
+  probabilityTank: 3
 --- !u!4 &2120306235
 Transform:
   m_ObjectHideFlags: 0
