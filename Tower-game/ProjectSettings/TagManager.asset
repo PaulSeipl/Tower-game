@@ -18,12 +18,12 @@ TagManager:
   - 
   - 
   - Enemy
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - GroundBack
+  - GroundFront
+  - GroundMid
+  - EnemyFront
+  - EnemyMid
+  - EnemyBack
   - 
   - 
   - 
