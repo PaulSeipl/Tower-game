@@ -8,18 +8,22 @@ public class TowerLivesController : MonoBehaviour
     public int towerLives;
     public GameObject explosion1;
     public GameObject explosion2;
+    private int maxTowerLives;
 
-    // Update is called once per frame
+    private void Start() {
+        maxTowerLives = towerLives;
+    }
     void Update()
     {
 
-        Debug.Log(towerLives);
+        float normalizedHealth = (float) towerLives/ (float) maxTowerLives;
+        Debug.Log(normalizedHealth);
+        HealthBarController.SetSize(normalizedHealth);
 
         if (towerLives <= 0) {
 
             Instantiate(explosion1, transform.position, Quaternion.identity);
             Instantiate(explosion2, transform.position, Quaternion.identity);
-
             Destroy(gameObject);
         }
     }

@@ -64,6 +64,7 @@ public class FastZombieController : MonoBehaviour
             }
 
         if (lives <= 0) {
+            ScoreScript.scoreValue += 100;
             Instantiate(onDestroyAnimation, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
