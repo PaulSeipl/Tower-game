@@ -63,6 +63,7 @@ public class NormalZombieController : MonoBehaviour
             }
 
         if (lives <= 0) {
+            ScoreScript.scoreValue += 250;
             Instantiate(onDestroyAnimation, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }

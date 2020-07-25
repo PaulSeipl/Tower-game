@@ -64,6 +64,7 @@ public class TankZombieController : MonoBehaviour
             }
 
         if (lives <= 0) {
+            ScoreScript.scoreValue += 500;
             Instantiate(onDestroyAnimation, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
