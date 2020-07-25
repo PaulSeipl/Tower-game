@@ -364,7 +364,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movingSpeed: 1
-  Tower: {fileID: 7730251548413535236, guid: a4e3567eba5204f9691ba03ec07024cc, type: 3}
+  Tower: {fileID: 814158862320846560, guid: 9d083e97a19a5410baf80f3bdfd51737, type: 3}
   lives: 10
   damage: 1
   onDestroyAnimation: {fileID: 7704014058367041833, guid: e221d3fef455e448a8d18d8c78812b30,
