@@ -37,7 +37,7 @@ public class EnemySpawnerScript : MonoBehaviour
             nextSpawn = Time.time + spawnRate;
             whereToSpawn = new Vector2(transform.position.x, transform.position.y);
 
-            float probability = (int) Random.Range(0, probabilitySum);
+            float probability = Random.Range(0, probabilitySum);
 
             int enemyIndex;
             if (probability <= probabilityNormal) {
