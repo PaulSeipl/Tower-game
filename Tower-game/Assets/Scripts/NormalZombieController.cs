@@ -18,6 +18,7 @@ public class NormalZombieController : MonoBehaviour
     private bool touchedTower = false;
     private float xScale;
     private Animator anim;
+    private SfxManager sfx;
 
     // Start is called before the first frame update
     void Start()
@@ -75,6 +76,9 @@ public class NormalZombieController : MonoBehaviour
                 isRunning = false;
                 towerLives = other.gameObject.GetComponent<TowerLivesController>();
             } else {
+                sfx = gameObject.GetComponent<SfxManager>();
+                sfx.sound.isAttacking = true;
+                sfx.playRandomClip();
                 touchedTower = true;
                 anim.SetBool("isRunning", false);
             }
