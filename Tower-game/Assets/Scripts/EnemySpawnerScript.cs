@@ -48,8 +48,6 @@ public class EnemySpawnerScript : MonoBehaviour
                 enemyIndex = 2;
             }
 
-            Debug.Log(probability);
-
             GameObject enemy = enemyList[enemyIndex];
 
             Instantiate(enemy, whereToSpawn, Quaternion.identity);
