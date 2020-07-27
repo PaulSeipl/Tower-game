@@ -53,7 +53,6 @@ public class FastZombieController : MonoBehaviour
         }
 
         if (!isRunning) {
-
                 if (timeBtwAttac <= 0) {
                     towerLives.towerLives -= damage;
                     timeBtwAttac = startTimeBtwAttac;
@@ -72,16 +71,13 @@ public class FastZombieController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other) {
         if (other.gameObject.tag.Equals("Tower")) {
-            if (touchedTower) {
-                isRunning = false;
-                towerLives = other.gameObject.GetComponent<TowerLivesController>();
-            } else {
-                sfx = gameObject.GetComponent<SfxManager>();
-                sfx.sound.isAttacking = true;
-                sfx.playRandomClip();
-                touchedTower = true;
-                anim.SetBool("isRunning", false);
-            }
+            sfx = gameObject.GetComponent<SfxManager>();
+            sfx.sound.isAttacking = true;
+            sfx.playRandomClip();
+            touchedTower = true;
+            anim.SetBool("isRunning", false);
+            isRunning = false;
+            towerLives = other.gameObject.GetComponent<TowerLivesController>();
         }
     }
 }
