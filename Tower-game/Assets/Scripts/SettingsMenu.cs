@@ -6,8 +6,16 @@ using UnityEngine.UI;
 public class SettingsMenu : MonoBehaviour
 {
     public TMPro.TMP_Dropdown resolutionDropdown;
+    public TMPro.TMP_Dropdown qualityDropdown;
+    public Toggle fullScreenToggle;
+
     Resolution[] resolutions;
     void Start() {
+
+        fullScreenToggle.isOn = Screen.fullScreen;
+
+        qualityDropdown.SetValueWithoutNotify(QualitySettings.GetQualityLevel());
+
         resolutions = Screen.resolutions;
 
         resolutionDropdown.ClearOptions();
