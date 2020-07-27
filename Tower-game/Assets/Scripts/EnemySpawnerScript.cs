@@ -9,9 +9,9 @@ public class EnemySpawnerScript : MonoBehaviour
     public GameObject fastEnemy;
     public float minWaiting = 5;
     public float maxWaiting = 10;
-    public float probabilityNormal = 1;
-    public float probabilityFast = 1;
-    public float probabilityTank = 1;
+    public float probabilityNormal = 0.5f;
+    public float probabilityFast = 0.3f;
+    public float probabilityTank = 0.2f;
 
     private float probabilitySum;
     private List<GameObject> enemyList = new List<GameObject>();
@@ -37,12 +37,12 @@ public class EnemySpawnerScript : MonoBehaviour
             nextSpawn = Time.time + spawnRate;
             whereToSpawn = new Vector2(transform.position.x, transform.position.y);
 
-            float probability = (int) Random.Range(0, probabilitySum);
+            float probability = Random.Range(0, probabilitySum);
 
             int enemyIndex;
             if (probability <= probabilityNormal) {
                 enemyIndex = 0;
-            } else if (probability <= probabilityNormal + probabilityFast) {
+            } else if (probability < probabilityNormal + probabilityFast) {
                 enemyIndex = 1;
             } else {
                 enemyIndex = 2;

@@ -37,8 +37,9 @@ public class BulletController : MonoBehaviour
             NormalZombieController enemy = other.gameObject.GetComponent<NormalZombieController>();
             enemy.lives = enemy.lives - damage;
         }
-
         Destroy(gameObject);
+
+        
     }
 
     private void DestroyBullet() {

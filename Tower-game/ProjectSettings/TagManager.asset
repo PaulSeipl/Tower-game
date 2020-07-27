@@ -8,6 +8,7 @@ TagManager:
   - NormalEnemy
   - TankEnemy
   - Tower
+  - GroundFront
   layers:
   - Default
   - TransparentFX
@@ -24,7 +25,7 @@ TagManager:
   - EnemyFront
   - EnemyMid
   - EnemyBack
-  - 
+  - Bullet
   - 
   - 
   - 
@@ -53,4 +54,7 @@ TagManager:
     locked: 0
   - name: NormalEnemySorting
     uniqueID: 2274376085
+    locked: 0
+  - name: UI
+    uniqueID: 1536994147
     locked: 0
