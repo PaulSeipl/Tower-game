@@ -22,7 +22,9 @@ public class WeaponController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Camera.main.ScreenToWorldPoint(Input.mousePosition).x < transform.position.x) {
+        if (!MenuController.isPaused)
+        {
+            if (Camera.main.ScreenToWorldPoint(Input.mousePosition).x < transform.position.x) {
 
             Vector3 theScale = transform.localScale;
             theScale.y = -scaleY;
@@ -44,6 +46,7 @@ public class WeaponController : MonoBehaviour
             }
         } else {
             timeBtwShots -= Time.deltaTime;
+        }
         }
     }
 

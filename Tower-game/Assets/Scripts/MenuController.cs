@@ -7,12 +7,8 @@ public class MenuController : MonoBehaviour
 {
     public string mainMenuScene;
     public GameObject pauseMenu;
-    public bool isPaused;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public GameObject optionsMenu;
+    public static bool isPaused;
 
     // Update is called once per frame
     void Update()
@@ -34,6 +30,7 @@ public class MenuController : MonoBehaviour
     public void ResumeGame(){
         isPaused = false;
         pauseMenu.SetActive(false);
+        optionsMenu.SetActive(false);
         Time.timeScale = 1f;
     }
 
