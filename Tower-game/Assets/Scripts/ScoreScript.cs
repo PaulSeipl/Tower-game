@@ -12,6 +12,7 @@ public class ScoreScript : MonoBehaviour
     void Start()
     {
         score = GetComponent<Text>();
+        Debug.Log("I am in this bitch");
     }
 
     // Update is called once per frame
