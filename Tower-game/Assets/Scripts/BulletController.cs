@@ -7,6 +7,7 @@ public class BulletController : MonoBehaviour
 
     public float lifeTime;
     public int damage;
+    public float HeadshotBonus = 2.0f;
 
     // Start is called before the first frame update
     void Start()
@@ -20,22 +21,29 @@ public class BulletController : MonoBehaviour
 
     }
 
-    /// <summary>
-    /// Sent when an incoming collider makes contact with this object's
-    /// collider (2D physics only).
-    /// </summary>
-    /// <param name="other">The Collision2D data associated with this collision.</param>
     void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.tag.Equals("FastEnemy")) {
             FastZombieController enemy = other.gameObject.GetComponent<FastZombieController>();
-            enemy.lives = enemy.lives - damage;
+            if (other.collider.GetType() == typeof(CircleCollider2D)) {
+                enemy.lives = enemy.lives - HeadshotBonus * damage;
+            } else {
+                enemy.lives = enemy.lives - damage;
+            }
         } else if (other.gameObject.tag.Equals("TankEnemy")) {
             TankZombieController enemy = other.gameObject.GetComponent<TankZombieController>();
-            enemy.lives = enemy.lives - damage;
+            if (other.collider.GetType() == typeof(CircleCollider2D)) {
+                enemy.lives = enemy.lives - HeadshotBonus * damage;
+            } else {
+                enemy.lives = enemy.lives - damage;
+            }
         } else if (other.gameObject.tag.Equals("NormalEnemy")) {
             NormalZombieController enemy = other.gameObject.GetComponent<NormalZombieController>();
-            enemy.lives = enemy.lives - damage;
+            if (other.collider.GetType() == typeof(CircleCollider2D)) {
+                enemy.lives = enemy.lives - HeadshotBonus * damage;
+            } else {
+                enemy.lives = enemy.lives - damage;
+            }
         }
         Destroy(gameObject);
 

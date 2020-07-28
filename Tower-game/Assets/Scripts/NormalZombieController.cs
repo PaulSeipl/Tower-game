@@ -8,7 +8,7 @@ public class NormalZombieController : MonoBehaviour
     public float movingSpeed;
     public GameObject Tower;
     private TowerLivesController towerLives;
-    public int lives;
+    public float lives;
     public int damage;
     private float timeBtwAttac;
     private float startTimeBtwAttac = 1;
