@@ -8,11 +8,18 @@ public class MenuController : MonoBehaviour
     public string mainMenuScene;
     public GameObject pauseMenu;
     public GameObject optionsMenu;
+    public GameObject gameOverScreen;
+    public GameObject score;
     public static bool isPaused;
 
     // Update is called once per frame
     void Update()
     {
+        if (TowerLivesController.gameOver)
+        {
+            gameOverScreen.SetActive(true);
+            Destroy(score);
+        }
         if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.P))
         {
             if (isPaused)

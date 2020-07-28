@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TowerLivesController : MonoBehaviour
 {
-
+    public static bool gameOver;
     public int towerLives;
     public GameObject explosion1;
     public GameObject explosion2;
@@ -14,6 +14,7 @@ public class TowerLivesController : MonoBehaviour
     private SpriteRenderer spriteRenderer;
 
     private void Start() {
+        gameOver = false;
         maxTowerLives = towerLives;
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
@@ -30,6 +31,7 @@ public class TowerLivesController : MonoBehaviour
             FindObjectOfType<AudioManager>().Stop("Theme");
             FindObjectOfType<AudioManager>().Play("Tower Explosion");
             FindObjectOfType<AudioManager>().Play("Game Over");
+            gameOver = true;
             Destroy(gameObject);
         } else if (towerLives <= maxTowerLives * 0.3) {
             spriteRenderer.sprite = LowLife;
