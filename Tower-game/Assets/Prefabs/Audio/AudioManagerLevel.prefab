@@ -45,7 +45,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sounds:
   - name: Theme
-    clip: {fileID: 8300000, guid: 7598d4f8d1c5c9e409176d6158124125, type: 3}
+    clip: {fileID: 8300000, guid: 95bced176f509cf4dab394a293c6869c, type: 3}
     volume: 1
     pitch: 1
     loop: 1
@@ -54,6 +54,14 @@ MonoBehaviour:
       type: 2}
   - name: Shoot Pistol
     clip: {fileID: 8300000, guid: 0889cde899722cc4ca09f077b964f8f0, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+    audioMixerGroup: {fileID: -9092980436661768787, guid: cb31c72f77f7dbb44b4c6ff4bdf951a6,
+      type: 2}
+  - name: Game Over
+    clip: {fileID: 8300000, guid: 1c2b631e5a7b7fc46a251ce898070d23, type: 3}
     volume: 1
     pitch: 1
     loop: 0

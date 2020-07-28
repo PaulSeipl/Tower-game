@@ -24,6 +24,9 @@ public class TowerLivesController : MonoBehaviour
 
             Instantiate(explosion1, transform.position, Quaternion.identity);
             Instantiate(explosion2, transform.position, Quaternion.identity);
+
+            FindObjectOfType<AudioManager>().Stop("Theme");
+            FindObjectOfType<AudioManager>().Play("Tower Explosion");
             Destroy(gameObject);
         }
     }

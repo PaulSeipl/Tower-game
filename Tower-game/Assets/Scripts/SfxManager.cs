@@ -35,13 +35,4 @@ public class SfxManager : MonoBehaviour
         }
         sound.source.Play();
     }
-
-    // Update is called once per frame
-    // void Update()
-    // {
-        
-    // }
-    // void Play() {
-    //     FindObjectOfType<AudioManager>().Play("Fat Zombie Walking 1");
-    // }
 }
