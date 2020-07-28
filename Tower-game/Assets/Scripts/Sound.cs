@@ -6,7 +6,7 @@ using System;
 public class Sound {
    
     public string name;
-    public AudioClip clip; = audioMixer.FindMatchingGroups(mixerOutput);
+    public AudioClip clip;
     [Range(0f, 1f)]
     public float volume;
     [Range(.1f, 3f)]
