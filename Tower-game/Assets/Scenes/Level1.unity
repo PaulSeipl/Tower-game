@@ -765,6 +765,31 @@ PrefabInstance:
       propertyPath: optionsMenu
       value: 
       objectReference: {fileID: 288564375}
+    - target: {fileID: 6101510886934032928, guid: c3b30ae0d4e533543a2b7fd3aed9524f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6101510886934032931, guid: c3b30ae0d4e533543a2b7fd3aed9524f,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 878
+      objectReference: {fileID: 0}
+    - target: {fileID: 6101510886934032931, guid: c3b30ae0d4e533543a2b7fd3aed9524f,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 494
+      objectReference: {fileID: 0}
+    - target: {fileID: 8915231329712439632, guid: c3b30ae0d4e533543a2b7fd3aed9524f,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 878
+      objectReference: {fileID: 0}
+    - target: {fileID: 8915231329712439632, guid: c3b30ae0d4e533543a2b7fd3aed9524f,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 494
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c3b30ae0d4e533543a2b7fd3aed9524f, type: 3}
 --- !u!1 &1784309446

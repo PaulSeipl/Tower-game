@@ -39,7 +39,7 @@ public class MenuController : MonoBehaviour
         ResumeGame();
     }
     public void ReturnToMain() {
-        Time.timeScale = 1f;
+        ResumeGame();
         SceneManager.LoadScene(mainMenuScene);  
     }
 }
