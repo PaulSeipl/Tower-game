@@ -46,14 +46,32 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: FastEnemySorting
-    uniqueID: 252777115
-    locked: 0
-  - name: TankEnemySorting
+  - name: TankEnemyBack
     uniqueID: 3609113935
     locked: 0
-  - name: NormalEnemySorting
+  - name: NormalEnemyBack
     uniqueID: 2274376085
+    locked: 0
+  - name: FastEnemyBack
+    uniqueID: 252777115
+    locked: 0
+  - name: TankEnemyMid
+    uniqueID: 1632164333
+    locked: 0
+  - name: NormalEnemyMid
+    uniqueID: 3291844217
+    locked: 0
+  - name: FastEnemyMid
+    uniqueID: 43046159
+    locked: 0
+  - name: TankEnemyFront
+    uniqueID: 694850119
+    locked: 0
+  - name: NormalEnemyFront
+    uniqueID: 4125131777
+    locked: 0
+  - name: FastEnemyFront
+    uniqueID: 2538988065
     locked: 0
   - name: UI
     uniqueID: 1536994147

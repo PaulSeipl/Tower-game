@@ -43,11 +43,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2dc288cf7ff54b93b1bd195f7a2a134, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  normalEnemy: {fileID: 8920546918544783697, guid: 39f5de869cfd54841be6fe933b494593,
+  normalEnemy: {fileID: 5122569240055449582, guid: e472ce6d2751646f2bdf19a71061faff,
     type: 3}
-  tankEnemy: {fileID: 2251316985381707486, guid: 0fa6834aad9634bd2997506b252ace53,
+  tankEnemy: {fileID: 2796342840982665210, guid: b872c10de37834332b591c066caf4369,
     type: 3}
-  fastEnemy: {fileID: 9195675947199709364, guid: 81ea9da7e1a0d4cf481d6df3cd23a73c,
+  fastEnemy: {fileID: 1341319008253858109, guid: 81ea9da7e1a0d4cf481d6df3cd23a73c,
     type: 3}
   minWaiting: 5
   maxWaiting: 10
