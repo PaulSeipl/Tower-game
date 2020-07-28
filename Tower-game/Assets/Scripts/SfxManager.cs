@@ -20,7 +20,7 @@ public class SfxManager : MonoBehaviour
     }
     
     void setRandomClip(AudioClip[] clips){
-        int clipIndex = (int) Random.Range(0, ((float) (clips.Length) + 0.5f));
+        int clipIndex = (int) Random.Range(0, ((float) (clips.Length) - 0.5f));
         sound.source.clip = clips[clipIndex];
     }
 
