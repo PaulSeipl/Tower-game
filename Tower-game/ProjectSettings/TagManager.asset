@@ -3,7 +3,12 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - FastEnemy
+  - NormalEnemy
+  - TankEnemy
+  - Tower
+  - GroundFront
   layers:
   - Default
   - TransparentFX
@@ -13,14 +18,14 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Enemy
+  - GroundBack
+  - GroundFront
+  - GroundMid
+  - EnemyFront
+  - EnemyMid
+  - EnemyBack
+  - Bullet
   - 
   - 
   - 
@@ -40,4 +45,16 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: FastEnemySorting
+    uniqueID: 252777115
+    locked: 0
+  - name: TankEnemySorting
+    uniqueID: 3609113935
+    locked: 0
+  - name: NormalEnemySorting
+    uniqueID: 2274376085
+    locked: 0
+  - name: UI
+    uniqueID: 1536994147
     locked: 0
