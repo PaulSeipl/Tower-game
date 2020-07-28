@@ -27,6 +27,9 @@ public class TowerLivesController : MonoBehaviour
         if (towerLives <= 0) {
             Instantiate(explosion1, transform.position, Quaternion.identity);
             Instantiate(explosion2, transform.position, Quaternion.identity);
+            FindObjectOfType<AudioManager>().Stop("Theme");
+            FindObjectOfType<AudioManager>().Play("Tower Explosion");
+            FindObjectOfType<AudioManager>().Play("Game Over");
             Destroy(gameObject);
         } else if (towerLives <= maxTowerLives * 0.3) {
             spriteRenderer.sprite = LowLife;
