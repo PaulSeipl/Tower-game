@@ -68,3 +68,11 @@ MonoBehaviour:
     source: {fileID: 0}
     audioMixerGroup: {fileID: 4596048444172284864, guid: cb31c72f77f7dbb44b4c6ff4bdf951a6,
       type: 2}
+  - name: Tower Explosion
+    clip: {fileID: 8300000, guid: a2161f937c563a043a670d4e67f2e163, type: 3}
+    volume: 1
+    pitch: 0.78
+    loop: 0
+    source: {fileID: 0}
+    audioMixerGroup: {fileID: -9092980436661768787, guid: cb31c72f77f7dbb44b4c6ff4bdf951a6,
+      type: 2}
