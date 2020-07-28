@@ -430,6 +430,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 688f83679f82f3d448a8f67694334e2b,
         type: 3}
+    - target: {fileID: 2318828497522448709, guid: 9d083e97a19a5410baf80f3bdfd51737,
+        type: 3}
+      propertyPath: towerLives
+      value: 75
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9d083e97a19a5410baf80f3bdfd51737, type: 3}
 --- !u!1001 &458955518
