@@ -23,7 +23,6 @@ public class FastZombieController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
         xScale = transform.localScale.x;
         isRunning = true;
         if (Tower.transform.position.x < transform.position.x) {
@@ -35,7 +34,6 @@ public class FastZombieController : MonoBehaviour
         } else {
             isMovingRight = true;
         }
-        InvokeRepeating("Play", 2f, 10f);//TODO
         anim = GetComponent<Animator>();
     }
 
