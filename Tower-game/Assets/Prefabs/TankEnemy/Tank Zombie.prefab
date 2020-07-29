@@ -628,6 +628,10 @@ MonoBehaviour:
   damage: 10
   onDestroyAnimation: {fileID: 7704014058367041833, guid: e221d3fef455e448a8d18d8c78812b30,
     type: 3}
+  returningPointLeft: {fileID: 1956889628309492264, guid: 8c257ecdf66db4ddd833992ea9edda0e,
+    type: 3}
+  returningPointRight: {fileID: 2116536785463578627, guid: 30c003154c55d4aa3abcdf8c45b71593,
+    type: 3}
 --- !u!114 &7338864341683807193
 MonoBehaviour:
   m_ObjectHideFlags: 0
