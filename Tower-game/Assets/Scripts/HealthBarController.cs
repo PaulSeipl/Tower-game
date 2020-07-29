@@ -12,6 +12,13 @@ public class HealthBarController : MonoBehaviour
         maxHealth = redBar.localScale.x;
     }
 
+    private void Update()
+    {
+        if (TowerLivesController.gameOver) {
+            Destroy(gameObject);
+        }
+    }
+
     public static void SetSize(float sizeNormalized) {
 
         Vector3 newScale = redBar.localScale;

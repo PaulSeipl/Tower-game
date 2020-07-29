@@ -33,25 +33,27 @@ public class EnemySpawnerScript : MonoBehaviour
     void Update()
     {
         
-        if (Time.time > nextSpawn) {
-            nextSpawn = Time.time + spawnRate;
-            whereToSpawn = new Vector2(transform.position.x, transform.position.y);
+        if (!TowerLivesController.gameOver) {
+            if (Time.time > nextSpawn) {
+                nextSpawn = Time.time + spawnRate;
+                whereToSpawn = new Vector2(transform.position.x, transform.position.y);
 
-            float probability = Random.Range(0, probabilitySum);
+                float probability = Random.Range(0, probabilitySum);
 
-            int enemyIndex;
-            if (probability <= probabilityNormal) {
-                enemyIndex = 0;
-            } else if (probability < probabilityNormal + probabilityFast) {
-                enemyIndex = 1;
-            } else {
-                enemyIndex = 2;
+                int enemyIndex;
+                if (probability <= probabilityNormal) {
+                    enemyIndex = 0;
+                } else if (probability < probabilityNormal + probabilityFast) {
+                    enemyIndex = 1;
+                } else {
+                    enemyIndex = 2;
+                }
+
+                GameObject enemy = enemyList[enemyIndex];
+
+                Instantiate(enemy, whereToSpawn, Quaternion.identity);
+                spawnRate = Random.Range(minWaiting, maxWaiting);
             }
-
-            GameObject enemy = enemyList[enemyIndex];
-
-            Instantiate(enemy, whereToSpawn, Quaternion.identity);
-            spawnRate = Random.Range(minWaiting, maxWaiting);
         }
 
     }
