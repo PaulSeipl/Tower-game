@@ -1,11 +1,9 @@
 ﻿using UnityEngine.Audio;
-// using System;
 using UnityEngine;
 
 public class SfxManager : MonoBehaviour
 {
     public SfxSounds sound;
-    // Start is called before the first frame update
     void Awake() {
         sound.source = gameObject.AddComponent<AudioSource>();
         sound.source.volume = sound.volume;
@@ -15,8 +13,6 @@ public class SfxManager : MonoBehaviour
         sound.isAttacking = false;
         
         InvokeRepeating("playRandomClip", sound.startingTime, sound.repeatingTime);
-        
-
     }
     
     void setRandomClip(AudioClip[] clips){

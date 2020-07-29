@@ -16,7 +16,5 @@ public class Sound {
 
     [HideInInspector]
     public AudioSource source;
-
-    // public AudioMixer _MasterMixer;
     public AudioMixerGroup audioMixerGroup;
 }
