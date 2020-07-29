@@ -13,6 +13,7 @@ public class WeaponController : MonoBehaviour
     private float timeBtwShots;
     public float startTimeBtwShots;
     public float shootingSpeed;
+    public static bool isCheated;
 
     void Start()
     {
@@ -25,28 +26,35 @@ public class WeaponController : MonoBehaviour
         if (!MenuController.isPaused)
         {
             if (Camera.main.ScreenToWorldPoint(Input.mousePosition).x < transform.position.x) {
-
-            Vector3 theScale = transform.localScale;
-            theScale.y = -scaleY;
-            transform.localScale = theScale;
-        } else {
-            
-            Vector3 theScale = transform.localScale;
-            theScale.y = scaleY;
-            transform.localScale = theScale;
-        }
-        
-        Vector3 difference = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
-        float rotationZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.Euler(0f, 0f, rotationZ + offset);
-
-        if (timeBtwShots <= 0) {
-            if (Input.GetMouseButtonDown(0)) {
-                shoot();
+                Vector3 theScale = transform.localScale;
+                theScale.y = -scaleY;
+                transform.localScale = theScale;
+            } else {
+                Vector3 theScale = transform.localScale;
+                theScale.y = scaleY;
+                transform.localScale = theScale;
             }
-        } else {
-            timeBtwShots -= Time.deltaTime;
-        }
+        
+            Vector3 difference = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+            float rotationZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
+            transform.rotation = Quaternion.Euler(0f, 0f, rotationZ + offset);
+            if (isCheated)
+            {
+                // Cheat is on
+                if (Input.GetMouseButton(0)) {
+                        shoot();
+                }
+            } else
+            {
+                if (timeBtwShots <= 0) {
+                    if (Input.GetMouseButtonDown(0)) {
+                        shoot();
+                    }
+                } else {
+                    timeBtwShots -= Time.deltaTime;
+                }
+            }
+            
         }
     }
 

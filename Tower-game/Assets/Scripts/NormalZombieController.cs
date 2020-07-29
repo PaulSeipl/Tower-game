@@ -8,11 +8,13 @@ public class NormalZombieController : MonoBehaviour
     public float movingSpeed;
     public GameObject Tower;
     private TowerLivesController towerLives;
-    public int lives;
+    public float lives;
     public int damage;
     private float timeBtwAttac;
     private float startTimeBtwAttac = 1;
     public GameObject onDestroyAnimation;
+    public GameObject returningPointLeft;
+    public GameObject returningPointRight;
     private bool isMovingRight;
     private bool isRunning;
     private bool touchedTower = false;
@@ -23,6 +25,8 @@ public class NormalZombieController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
+        movingSpeed = Random.Range(movingSpeed * 0.8f, movingSpeed);
 
         xScale = transform.localScale.x;
         isRunning = true;
@@ -54,14 +58,40 @@ public class NormalZombieController : MonoBehaviour
 
         if (!isRunning) {
 
-                if (timeBtwAttac <= 0) {
-                    towerLives.towerLives -= damage;
-                    timeBtwAttac = startTimeBtwAttac;
-                } else {
-                    timeBtwAttac -= Time.deltaTime;
-                }
-
+            if (timeBtwAttac <= 0) {
+                towerLives.towerLives -= damage;
+                timeBtwAttac = startTimeBtwAttac;
+            } else {
+                timeBtwAttac -= Time.deltaTime;
             }
+
+            if (TowerLivesController.gameOver) {
+                isRunning = true;
+            }
+
+        }
+
+        if (TowerLivesController.gameOver && !anim.GetBool("isRunning")) {
+            anim.SetBool("isRunning", true);
+        }
+
+        if (transform.position.x > returningPointRight.transform.position.x) {
+            isMovingRight = false;
+
+            Vector3 theScale = transform.localScale;
+            theScale.x = -xScale;
+            transform.localScale = theScale;
+        } else if (transform.position.x < returningPointLeft.transform.position.x) {
+
+            if (!isMovingRight) {
+
+                isMovingRight = true;
+                Vector3 theScale = transform.localScale;
+                theScale.x = xScale;
+                transform.localScale = theScale;
+            }
+
+        }
 
         if (lives <= 0) {
             ScoreScript.scoreValue += 250;
