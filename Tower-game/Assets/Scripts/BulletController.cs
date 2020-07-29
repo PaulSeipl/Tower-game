@@ -15,12 +15,6 @@ public class BulletController : MonoBehaviour
         Invoke("DestroyBullet", lifeTime);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.tag.Equals("FastEnemy")) {
@@ -45,12 +39,6 @@ public class BulletController : MonoBehaviour
                 enemy.lives = enemy.lives - damage;
             }
         }
-        Destroy(gameObject);
-
-        
-    }
-
-    private void DestroyBullet() {
         Destroy(gameObject);
     }
 }

@@ -22,7 +22,6 @@ public class TowerLivesController : MonoBehaviour
     {
 
         float normalizedHealth = (float) towerLives/ (float) maxTowerLives;
-        Debug.Log(normalizedHealth);
         HealthBarController.SetSize(normalizedHealth);
 
         if (towerLives <= 0) {
