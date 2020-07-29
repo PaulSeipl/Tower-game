@@ -38,7 +38,6 @@ public class TankZombieController : MonoBehaviour
         } else {
             isMovingRight = true;
         }
-        // FindObjectOfType<AudioManager>().Play("Fat Zombie Walking 1");
         anim = GetComponent<Animator>();
     }
 
