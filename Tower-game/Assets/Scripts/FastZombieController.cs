@@ -13,6 +13,8 @@ public class FastZombieController : MonoBehaviour
     private float timeBtwAttac;
     private float startTimeBtwAttac = 1;
     public GameObject onDestroyAnimation;
+    public GameObject returningPointLeft;
+    public GameObject returningPointRight;
     private bool isMovingRight;
     private bool isRunning;
     private bool touchedTower = false;
@@ -24,6 +26,7 @@ public class FastZombieController : MonoBehaviour
     void Start()
     {
 
+        movingSpeed = Random.Range(movingSpeed * 0.8f, movingSpeed);
         xScale = transform.localScale.x;
         isRunning = true;
         if (Tower.transform.position.x < transform.position.x) {
@@ -53,20 +56,47 @@ public class FastZombieController : MonoBehaviour
         }
 
         if (!isRunning) {
-                if (timeBtwAttac <= 0) {
-                    towerLives.towerLives -= damage;
-                    timeBtwAttac = startTimeBtwAttac;
-                } else {
-                    timeBtwAttac -= Time.deltaTime;
-                }
-
+            if (timeBtwAttac <= 0) {
+                towerLives.towerLives -= damage;
+                timeBtwAttac = startTimeBtwAttac;
+            } else {
+                timeBtwAttac -= Time.deltaTime;
             }
+
+            if (TowerLivesController.gameOver) {
+                isRunning = true;
+            }
+        }
+
+        if (transform.position.x > returningPointRight.transform.position.x) {
+            isMovingRight = false;
+
+            Vector3 theScale = transform.localScale;
+            theScale.x = -xScale;
+            transform.localScale = theScale;
+        } else if (transform.position.x < returningPointLeft.transform.position.x) {
+
+            if (!isMovingRight) {
+
+                isMovingRight = true;
+                Vector3 theScale = transform.localScale;
+                theScale.x = xScale;
+                transform.localScale = theScale;
+            }
+
+        }
+
+        if (TowerLivesController.gameOver && !anim.GetBool("isRunning")) {
+            anim.SetBool("isRunning", true);
+        }
 
         if (lives <= 0) {
             ScoreScript.scoreValue += 100;
             Instantiate(onDestroyAnimation, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
+
+        
     }
 
     private void OnCollisionEnter2D(Collision2D other) {
