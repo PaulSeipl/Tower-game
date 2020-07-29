@@ -46,18 +46,7 @@ public class NormalZombieController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (isMovingRight) {
-            if (isRunning) {
-                transform.Translate(2 * Time.deltaTime * movingSpeed, 0,0);
-            }
-        } else {
-            if (isRunning) {
-                transform.Translate(-2 * Time.deltaTime * movingSpeed, 0,0);
-            }
-        }
-
         if (!isRunning) {
-
             if (timeBtwAttac <= 0) {
                 towerLives.towerLives -= damage;
                 timeBtwAttac = startTimeBtwAttac;
@@ -68,31 +57,36 @@ public class NormalZombieController : MonoBehaviour
             if (TowerLivesController.gameOver) {
                 isRunning = true;
             }
+        } else {
+            if (isMovingRight) {
+                transform.Translate(2 * Time.deltaTime * movingSpeed, 0,0);
+            } else {
+                transform.Translate(-2 * Time.deltaTime * movingSpeed, 0,0);
+            }
 
+            if (transform.position.x > returningPointRight.transform.position.x) {
+                isMovingRight = false;
+
+                Vector3 theScale = transform.localScale;
+                theScale.x = -xScale;
+                transform.localScale = theScale;
+            } else if (transform.position.x < returningPointLeft.transform.position.x) {
+
+                if (!isMovingRight) {
+
+                    isMovingRight = true;
+                    Vector3 theScale = transform.localScale;
+                    theScale.x = xScale;
+                    transform.localScale = theScale;
+                }
+
+            }
         }
 
         if (TowerLivesController.gameOver && !anim.GetBool("isRunning")) {
             anim.SetBool("isRunning", true);
         }
-
-        if (transform.position.x > returningPointRight.transform.position.x) {
-            isMovingRight = false;
-
-            Vector3 theScale = transform.localScale;
-            theScale.x = -xScale;
-            transform.localScale = theScale;
-        } else if (transform.position.x < returningPointLeft.transform.position.x) {
-
-            if (!isMovingRight) {
-
-                isMovingRight = true;
-                Vector3 theScale = transform.localScale;
-                theScale.x = xScale;
-                transform.localScale = theScale;
-            }
-
-        }
-
+        
         if (lives <= 0) {
             ScoreScript.scoreValue += 250;
             Instantiate(onDestroyAnimation, transform.position, Quaternion.identity);

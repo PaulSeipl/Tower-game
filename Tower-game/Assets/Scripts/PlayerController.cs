@@ -12,12 +12,6 @@ public class PlayerController : MonoBehaviour
         anim = GetComponent<Animator>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     void OnCollisionExit2D(Collision2D other)
     {
         anim.SetBool("isFalling", true);

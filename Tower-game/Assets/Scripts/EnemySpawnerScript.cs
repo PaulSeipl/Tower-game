@@ -55,6 +55,5 @@ public class EnemySpawnerScript : MonoBehaviour
                 spawnRate = Random.Range(minWaiting, maxWaiting);
             }
         }
-
     }
 }
