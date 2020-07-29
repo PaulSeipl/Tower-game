@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class MenuController : MonoBehaviour
@@ -19,6 +17,17 @@ public class MenuController : MonoBehaviour
         {
             gameOverScreen.SetActive(true);
             Destroy(score);
+        }
+        // activate Cheat (Easteregg)
+        if (Input.GetKeyDown(KeyCode.F1))
+        {
+            if (WeaponController.isCheated)
+            {
+                WeaponController.isCheated = false;
+            } else
+            {
+                WeaponController.isCheated = true;
+            }
         }
         if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.P))
         {
